@@ -12,7 +12,6 @@ ul {
   list-style-type: none;
   margin: 0;
   overflow: hidden;
-  position: fixed;
   width: 80%;
 }
 
@@ -29,8 +28,11 @@ li {
 .App-header {
   background-color: #236eae;
   height: 30px;
+  width: 100%;
   padding: 10px 20px 10px 80px;
   color: white;
+  position: fixed;
+  z-index: 1020;
 }
 
 .App-title {
@@ -45,10 +47,18 @@ li {
   cursor: pointer;
 }
 
+/***************/
+/* BODY AREA */
+/***************/
+
 .App-intro {
-  font-size: large;
+  background-image: url("https://thumb.lovemondays.com.br/4TbrsFCt6bxW-W7MHhmCA5-MgOk=/2560x1160/https://thumb.lovemondays.com.br/image/229d85d4e32c405faa68c7924d287741/home_galleries/157f51/telefonica-brasil-vivo.jpg");
+  height: 800px;
+  color: white;
+  margin-top: -1.5em;
+  background: linear-gradient(to top, #6f9ab9 0, #fff 100%);
+  position: relative;
 }
 
-/***************/
-/* HEADER AREA */
-/***************/
+.searchEngine {
+}

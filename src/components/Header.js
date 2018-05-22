@@ -12,10 +12,8 @@ class Header extends Component {
   handleLoginRequest = e => {
     try {
       api.get().then(response => {
-        this.setState({ loginObject: response.data.result });
+        this.setState({ loginObject: response.data });
       });
-
-      //console.log(loginObject);
     } catch (error) {
       console.log(error);
     }

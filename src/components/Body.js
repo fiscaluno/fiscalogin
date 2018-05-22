@@ -3,10 +3,10 @@ import React, { Component } from "react";
 class Body extends Component {
   render() {
     return (
-      <div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+      <div className="App-intro">
+        <div className="searchEngine">
+          <h1>A faculdade ideal, avaliada por estudantes como você.</h1>
+        </div>
       </div>
     );
   }
