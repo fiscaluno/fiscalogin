@@ -33,7 +33,7 @@ class Header extends Component {
               <h1 className="App-title">FISCALUNO</h1>
             </li>
             <li className="App-login">
-              <span>ENTRAR</span>
+              <span onClick={this.handleLoginRequest}>ENTRAR</span>
             </li>
           </ul>
         </header>
