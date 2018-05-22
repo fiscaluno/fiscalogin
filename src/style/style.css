@@ -1,0 +1,53 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+/***************/
+/* HEADER AREA */
+/***************/
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  overflow: hidden;
+  position: fixed;
+  width: 80%;
+}
+
+li {
+  float: left;
+}
+
+.App-logo {
+  height: 70px;
+  float: left;
+  margin-top: -20px;
+}
+
+.App-header {
+  background-color: #236eae;
+  height: 30px;
+  padding: 10px 20px 10px 80px;
+  color: white;
+}
+
+.App-title {
+  font-size: 1.5em;
+  margin-top: 0;
+}
+
+.App-login {
+  float: right;
+  text-align: center;
+  margin-top: 0.4em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+/***************/
+/* HEADER AREA */
+/***************/
