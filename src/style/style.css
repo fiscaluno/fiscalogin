@@ -2,10 +2,13 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  outline: 0;
 }
 
 /***************/
+
 /* HEADER AREA */
+
 /***************/
 
 ul {
@@ -48,17 +51,56 @@ li {
 }
 
 /***************/
+
 /* BODY AREA */
+
 /***************/
 
-.App-intro {
-  background-image: url("https://thumb.lovemondays.com.br/4TbrsFCt6bxW-W7MHhmCA5-MgOk=/2560x1160/https://thumb.lovemondays.com.br/image/229d85d4e32c405faa68c7924d287741/home_galleries/157f51/telefonica-brasil-vivo.jpg");
-  height: 800px;
+.contentDiv {
+  background-image: url("https://thumb.lovemondays.com.br/OgQmaqU5marO2Eo9urpFI9xO0ME=/2560x1160/https://thumb.lovemondays.com.br/image/5752a20bf8ac4513b7ca41c79e8fccf5/home_galleries/0cdf83/globosat.png");
+  height: 860px;
+  width: 100%;
   color: white;
-  margin-top: -1.5em;
-  background: linear-gradient(to top, #6f9ab9 0, #fff 100%);
-  position: relative;
+  overflow: auto;
 }
 
-.searchEngine {
+#content div {
+  position: absolute;
+  text-align: center;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 50%;
+  height: 120px;
+  background: rgba(35, 110, 174, .9);
+  border-radius: 2px;
+}
+
+#engineForm {
+  display: flex;
+  margin-top: 20px;
+  width: 100%;
+}
+
+#engineForm input {
+  flex: 1;
+  height: 40px;
+  padding: 0 20px;
+  background: #FFF;
+  border: 0;
+  font-size: 18px;
+  color: #444;
+  margin-left: 20px;
+}
+
+#engineForm button {
+  height: 40px;
+  padding: 0 10px;
+  margin-left: 10px;
+  margin-right: 20px;
+  color: #fff;
+  background-color: #ff6b70;
+  border-color: #ff6b70;
 }

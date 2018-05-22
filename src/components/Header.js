@@ -6,13 +6,15 @@ import "../style/style.css";
 class Header extends Component {
   constructor() {
     super();
-    this.state = { loginObject: [] };
+    this.state = { loginObject: [], title: 'ENTRAR' };
   }
+
+
 
   handleLoginRequest = e => {
     try {
       api.get().then(response => {
-        this.setState({ loginObject: response.data });
+        this.setState({ loginObject: response.data, title:'Ola, usuario' });
       });
     } catch (error) {
       console.log(error);
@@ -31,7 +33,7 @@ class Header extends Component {
               <h1 className="App-title">FISCALUNO</h1>
             </li>
             <li className="App-login">
-              <span onClick={this.handleLoginRequest}>ENTRAR</span>
+              <span onClick={this.handleLoginRequest}>{this.state.title}</span>
             </li>
           </ul>
         </header>
