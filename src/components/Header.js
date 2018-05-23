@@ -47,7 +47,7 @@ class Header extends Component {
   };
 
   checkLoginState() {
-    console.log("Checking login status...........");
+    console.log("Checando status de login...........");
 
     window.FB.getLoginStatus(
       function(response) {
@@ -95,8 +95,9 @@ class Header extends Component {
       console.log("Enviando para a API.");
       api
         .post(
+          "https://fiscaluno-mu.herokuapp.com/users",
           { logs: fbData },
-          { headers: { "Content-Type": "application/x-www-form-urlencoded" } }
+          { headers: { "Content-Type": "text/json" } }
         )
         .then(response => {
           console.log("Enviado.");
