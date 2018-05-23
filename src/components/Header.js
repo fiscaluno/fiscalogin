@@ -66,31 +66,42 @@ class Header extends Component {
       console.log("Conectado");
       this.fetchDataFacebook();
     } else if (response.status === "not_authorized") {
-      console.log("Import error", "Authorize app to import data", "error");
+      console.log("Erro de importação: autorize o app para exportar dados");
     } else {
-      console.log(
-        "Erro de importação",
-        "Ocorreu erro enquanto estava importando os dados",
-        "Erro"
-      );
+      console.log("Ocorreu erro enquanto estava importando os dados");
     }
   }
 
   fetchDataFacebook = () => {
     console.log("Adquirindo informações.... ");
 
-    window.FB.api("/me", function(user) {
-      console.log(user);
-      console.log("Successful login from facebook : " + user.email);
-      this.setState({ title: "Bem vindo, " + user.email });
-    });
+    window.FB.api(
+      "/me",
+      function(user) {
+        console.log(user);
+        console.log("Logado através do facebook com sucesso: " + user.name);
+        this.setState({ title: "Bem vindo, " + user.name });
+        this.handleLoginRequest(user.id);
+      }.bind(this)
+    );
   };
 
-  handleLoginRequest = e => {
+  handleLoginRequest = id => {
+    let fbData = JSON.stringify({
+      facebookID: id
+    });
+
     try {
-      api.get().then(response => {
-        this.setState({ loginObject: response.data });
-      });
+      console.log("Enviando para a API.");
+      api
+        .post(
+          { logs: fbData },
+          { headers: { "Content-Type": "application/x-www-form-urlencoded" } }
+        )
+        .then(response => {
+          console.log("Enviado.");
+          console.log(response.data);
+        });
     } catch (error) {
       console.log(error);
     }
