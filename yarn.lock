@@ -288,7 +288,11 @@ async-each@^1.0.0:
 
 async@2.6.0:
   version "2.6.0"
+<<<<<<< HEAD
   resolved "https://registry.yarnpkg.com/async/-/async-2.6.0.tgz#61a29abb6fcc026fea77e56d1c6ec53a795951f4"
+=======
+  resolved "http://nexus.sirius.tivit.com.br/nexus/repository/nmp-all/async/-/async-2.6.0.tgz#61a29abb6fcc026fea77e56d1c6ec53a795951f4"
+>>>>>>> 70699c5e49bfb1614bf7414578222f070444dbbb
   dependencies:
     lodash "^4.14.0"
 
@@ -342,7 +346,11 @@ aws4@^1.6.0:
 
 axios@^0.18.0:
   version "0.18.0"
+<<<<<<< HEAD
   resolved "https://registry.yarnpkg.com/axios/-/axios-0.18.0.tgz#32d53e4851efdc0a11993b6cd000789d70c05102"
+=======
+  resolved "http://nexus.sirius.tivit.com.br/nexus/repository/nmp-all/axios/-/axios-0.18.0.tgz#32d53e4851efdc0a11993b6cd000789d70c05102"
+>>>>>>> 70699c5e49bfb1614bf7414578222f070444dbbb
   dependencies:
     follow-redirects "^1.3.0"
     is-buffer "^1.1.5"
@@ -1027,7 +1035,11 @@ base64-js@^1.0.2:
 
 base64url@^2.0.0:
   version "2.0.0"
+<<<<<<< HEAD
   resolved "https://registry.yarnpkg.com/base64url/-/base64url-2.0.0.tgz#eac16e03ea1438eff9423d69baa36262ed1f70bb"
+=======
+  resolved "http://nexus.sirius.tivit.com.br/nexus/repository/nmp-all/base64url/-/base64url-2.0.0.tgz#eac16e03ea1438eff9423d69baa36262ed1f70bb"
+>>>>>>> 70699c5e49bfb1614bf7414578222f070444dbbb
 
 base@^0.11.1:
   version "0.11.2"
@@ -1547,7 +1559,11 @@ combined-stream@1.0.6, combined-stream@~1.0.5:
 
 commander@2.11.0:
   version "2.11.0"
+<<<<<<< HEAD
   resolved "https://registry.yarnpkg.com/commander/-/commander-2.11.0.tgz#157152fd1e7a6c8d98a5b715cf376df928004563"
+=======
+  resolved "http://nexus.sirius.tivit.com.br/nexus/repository/nmp-all/commander/-/commander-2.11.0.tgz#157152fd1e7a6c8d98a5b715cf376df928004563"
+>>>>>>> 70699c5e49bfb1614bf7414578222f070444dbbb
 
 commander@2.15.x, commander@^2.11.0, commander@~2.15.0:
   version "2.15.1"
@@ -2860,7 +2876,11 @@ fs-extra@^0.30.0:
 
 fs-extra@^4.0.2:
   version "4.0.3"
+<<<<<<< HEAD
   resolved "https://registry.yarnpkg.com/fs-extra/-/fs-extra-4.0.3.tgz#0d852122e5bc5beb453fb028e9c0c9bf36340c94"
+=======
+  resolved "http://nexus.sirius.tivit.com.br/nexus/repository/nmp-all/fs-extra/-/fs-extra-4.0.3.tgz#0d852122e5bc5beb453fb028e9c0c9bf36340c94"
+>>>>>>> 70699c5e49bfb1614bf7414578222f070444dbbb
   dependencies:
     graceful-fs "^4.1.2"
     jsonfile "^4.0.0"
@@ -2928,7 +2948,11 @@ getpass@^0.1.1:
 
 gh-pages@^1.1.0:
   version "1.1.0"
+<<<<<<< HEAD
   resolved "https://registry.yarnpkg.com/gh-pages/-/gh-pages-1.1.0.tgz#738134d8e35e5323b39892cda28b8904e85f24b2"
+=======
+  resolved "http://nexus.sirius.tivit.com.br/nexus/repository/nmp-all/gh-pages/-/gh-pages-1.1.0.tgz#738134d8e35e5323b39892cda28b8904e85f24b2"
+>>>>>>> 70699c5e49bfb1614bf7414578222f070444dbbb
   dependencies:
     async "2.6.0"
     base64url "^2.0.0"
@@ -4101,7 +4125,11 @@ jsonfile@^3.0.0:
 
 jsonfile@^4.0.0:
   version "4.0.0"
+<<<<<<< HEAD
   resolved "https://registry.yarnpkg.com/jsonfile/-/jsonfile-4.0.0.tgz#8771aae0799b64076b76640fca058f9c10e33ecb"
+=======
+  resolved "http://nexus.sirius.tivit.com.br/nexus/repository/nmp-all/jsonfile/-/jsonfile-4.0.0.tgz#8771aae0799b64076b76640fca058f9c10e33ecb"
+>>>>>>> 70699c5e49bfb1614bf7414578222f070444dbbb
   optionalDependencies:
     graceful-fs "^4.1.6"
 
