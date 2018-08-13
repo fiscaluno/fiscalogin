@@ -1,8 +1,7 @@
 {
   "short_name": "Fiscaluno",
   "name": "Fiscaluno",
-  "icons": [
-    {
+  "icons": [{
       "src": "images/resources/icons/icon-144.png",
       "sizes": "144x144",
       "type": "image/png"

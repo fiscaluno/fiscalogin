@@ -31,7 +31,10 @@ class Header extends Component {
 
   constructor() {
     super();
-    this.state = { loginObject: [], title: "ENTRAR" };
+    this.state = { 
+      loginObject: []
+      , title: "ENTRAR"
+    };
   }
 
   facebookLogin = () => {
@@ -79,6 +82,7 @@ class Header extends Component {
       "/me",
       function(user) {
         console.log(user);
+
         console.log("Logado através do facebook com sucesso: " + user.name);
         this.setState({ title: "Bem vindo, " + user.name });
         this.handleLoginRequest(user.id);
@@ -102,6 +106,8 @@ class Header extends Component {
         .then(response => {
           console.log("Enviado.");
           console.log(response.data);
+          this.setState({ ...this.loginObject, loginObject: JSON.stringify(response.data) });
+          console.log(this.state.loginObject);
         });
     } catch (error) {
       console.log(error);

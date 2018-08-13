@@ -1,17 +1,7 @@
-import React, { Component } from "react";
+import React from "react";
 
-import Header from "./Header";
-import Body from "./Body";
+import Routes from '../routes';
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <Header />
-        <Body />
-      </div>
-    );
-  }
-}
+const App =() => <Routes />;
 
 export default App;

@@ -1,13 +1,15 @@
 import React, { Component } from "react";
 
-class Body extends Component {
+import Header from './Header';
+class Home extends Component {
   searchRequest = e => {
     e.preventDefault();
   };
 
   render() {
     return (
-      <div className="App-intro">
+      <div>
+        <Header />
         <div id="content" className="contentDiv">
           <div>
             <h3>A faculdade ideal, avaliada por estudantes como você.</h3>
@@ -23,4 +25,4 @@ class Body extends Component {
   }
 }
 
-export default Body;
+export default Home;

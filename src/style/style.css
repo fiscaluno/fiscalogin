@@ -1,146 +1,139 @@
 body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Open Sans', sans-serif;
-    outline: 0;
-  }
-  
-  /***************/
-  
-  /* HEADER AREA */
-  
-  /***************/
-  
-  ul {
-    list-style-type: none;
-    margin: 0;
-    overflow: hidden;
-    width: 80%;
-  }
-  
-  li {
-    float: left;
-  }
-  
-  .App-logo {
-    height: 70px;
-    float: left;
-    margin-top: -20px;
-  }
-  
-  .App-header {
-    background-color: #236eae;
-    height: 30px;
-    width: 100%;
-    padding: 10px 20px 10px 80px;
-    color: white;
-    position: fixed;
-    z-index: 1020;
-  }
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;
+  outline: 0;
+}
 
-  
-  .App-title {
-    font-size: 1.5em;
-    margin-top: 0;
-  }
-  
-  .App-login {
-    float: right;
-    text-align: center;
-    margin-top: 0.4em;
-    cursor: pointer;
-  }
-  
-  /***************/
-  
-  /* BODY AREA */
-  
-  /***************/
-  
-  .contentDiv {
-    background-image: url("https://thumb.lovemondays.com.br/OgQmaqU5marO2Eo9urpFI9xO0ME=/2560x1160/https://thumb.lovemondays.com.br/image/5752a20bf8ac4513b7ca41c79e8fccf5/home_galleries/0cdf83/globosat.png");
-    height: 860px;
-    width: 100%;
-    color: white;
-    overflow: auto;
-  }
-  
-  #content div {
-    position: absolute;
-    text-align: center;
-    margin: auto;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    width: 50%;
-    height: 140px;
-    background: rgba(35, 110, 174, 0.9);
-    border-radius: 2px;
-  }
-  
-  #engineForm {
-    display: flex;
-    margin-top: 20px;
-    justify-content: center;
-    width: 100%;
-  }
-  
-  #engineForm input {
-    width: 30%;
-    height: 40px;
-    padding: 0 20px;
-    background: #fff;
-    border: 0;
-    font-size: 18px;
-    color: #444;
-    margin-left: 20px;
-  }
-  
-  #engineForm button {
-    height: 40px;
-    padding: 0 10px;
-    margin-left: 10px;
-    margin-right: 20px;
-    color: #fff;
-    background-color: #ff6b70;
-    border-color: #ff6b70;
-  }
-  
+/***************/
+
+/* HEADER AREA */
+
+/***************/
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  overflow: hidden;
+  width: 80%;
+}
+
+li {
+  float: left;
+}
+
+.App-logo {
+  height: 70px;
+  float: left;
+  margin-top: -20px;
+}
+
+.App-header {
+  background-color: #236eae;
+  height: 30px;
+  width: 100%;
+  padding: 10px 20px 10px 80px;
+  color: white;
+  position: fixed;
+  z-index: 1020;
+}
+
+.App-title {
+  font-size: 1.5em;
+  margin-top: 0;
+}
+
+.App-login {
+  float: right;
+  text-align: center;
+  margin-top: 0.4em;
+  cursor: pointer;
+}
+
+/***************/
+
+/* BODY AREA */
+
+/***************/
+
+.contentDiv {
+  background-image: url("https://thumb.lovemondays.com.br/OgQmaqU5marO2Eo9urpFI9xO0ME=/2560x1160/https://thumb.lovemondays.com.br/image/5752a20bf8ac4513b7ca41c79e8fccf5/home_galleries/0cdf83/globosat.png");
+  height: 860px;
+  width: 100%;
+  color: white;
+  overflow: auto;
+}
+
+#content div {
+  position: absolute;
+  text-align: center;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 50%;
+  height: 140px;
+  background: rgba(35, 110, 174, 0.9);
+  border-radius: 2px;
+}
+
+#engineForm {
+  display: flex;
+  margin-top: 20px;
+  justify-content: center;
+  width: 100%;
+}
+
+#engineForm input {
+  width: 30%;
+  height: 40px;
+  padding: 0 20px;
+  background: #fff;
+  border: 0;
+  font-size: 18px;
+  color: #444;
+  margin-left: 20px;
+}
+
+#engineForm button {
+  height: 40px;
+  padding: 0 10px;
+  margin-left: 10px;
+  margin-right: 20px;
+  color: #fff;
+  background-color: #ff6b70;
+  border-color: #ff6b70;
+}
+
 /**********************************
 ******** RESPONSIVE AREA **********
 **********************************/
 
 @media (max-width: 600px) {
-  .App-header { 
+  .App-header {
     padding: 0.5rem;
   }
-
   .App-title {
     display: none;
   }
-
   #content div {
     width: 65%;
     padding: 0 0.5rem 0 0.5rem;
     height: 250px;
   }
-
-  .contentDiv { 
+  .contentDiv {
     height: 740px;
     background-image: url("https://www.tcdi.com/wp-content/uploads/2015/05/Future.jpg");
   }
-
   #engineForm {
     display: block;
   }
-
   #engineForm input {
     width: 70%;
     margin: 0.35rem 0 0.35rem 0;
     padding: 0 1.5rem 0 1.5rem;
   }
-
   #engineForm button {
     margin: 0.35rem 0 0.35rem 0;
     padding: 0 1.5rem 0 1.5rem;
