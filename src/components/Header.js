@@ -1,5 +1,7 @@
-import React, { Component } from "react";
-import api from "../services/api";
+import React, { 
+  Component
+ } from "react";
+import { api } from "../services";
 import logo from "../images/logo.png";
 import "../style/style.css";
 
@@ -41,7 +43,6 @@ class Header extends Component {
     window.FB.login(
       function(resp) {
         this.statusChangeCallback(resp);
-        console.log(resp);
       }.bind(this),
       {
         scope: "email"
@@ -56,7 +57,6 @@ class Header extends Component {
       function(response) {
         alert("FB Callback");
         console.log("----------->");
-        console.log(response);
         this.statusChangeCallback(response);
       }.bind(this)
     );
@@ -105,9 +105,11 @@ class Header extends Component {
         )
         .then(response => {
           console.log("Enviado.");
-          console.log(response.data);
+          console.log(response.data.Body.token);
+          const { token } = response.data.Body;
           this.setState({ ...this.loginObject, loginObject: JSON.stringify(response.data) });
-          console.log(this.state.loginObject);
+
+          localStorage.setItem('@FISCALUNO:Token', JSON.stringify(token));
         });
     } catch (error) {
       console.log(error);

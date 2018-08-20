@@ -1,5 +1,18 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-const Search = () => <h1>Hello World</h1>;
+/*import {
+  searchCourse,
+  searchCourseWithID,
+  searchInstitution,
+  searchInstitutionWithID
+} from '../services';*/
 
-export default Search
+import Header from '../../Header';
+
+export default class Search extends Component {
+  render() {
+    return(
+      <Header />
+    );
+  };
+};
