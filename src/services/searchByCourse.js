@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const searchCourse = axios.create({
-  baseURL: "https://private-f15175-fiscalunoapi.apiary-mock.com/courses/",
+  baseURL: "https://private-f15175-fiscalunoapi.apiary-mock.com/courses",
   timeout: 5000,
   headers: {
     "X-Client-ID":

@@ -1,7 +1,15 @@
-import React from "react";
+import React, { Component } from "react";
 
 import Routes from '../routes';
 
-const App = () => <Routes />;
+export default class App extends Component {
+    componentWillMount() {
+        //localStorage.clear();
+    };
 
-export default App;
+    render() {
+        return(
+            <Routes />
+        );
+    };
+};

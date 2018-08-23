@@ -29,6 +29,10 @@ class Header extends Component {
       js.src = "https://connect.facebook.net/en_US/sdk.js";
       fjs.parentNode.insertBefore(js, fjs);
     })(document, "script", "facebook-jssdk");
+
+    !localStorage.getItem('@FISCALUNO:BtnTitle') ?
+      this.setState({ ...this.state.title, title: 'ENTRAR' })
+    : this.setState({ ...this.state.title, title: localStorage.getItem('@FISCALUNO:BtnTitle') });
   }
 
   constructor() {
@@ -64,7 +68,6 @@ class Header extends Component {
 
   statusChangeCallback(response) {
     console.log("statusChangeCallback");
-    console.log(response);
     if (response.status === "connected") {
       console.log("Conectado");
       this.fetchDataFacebook();
@@ -86,6 +89,7 @@ class Header extends Component {
         console.log("Logado através do facebook com sucesso: " + user.name);
         this.setState({ title: "Bem vindo, " + user.name });
         this.handleLoginRequest(user.id);
+        localStorage.setItem('@FISCALUNO:BtnTitle', this.state.title);
       }.bind(this)
     );
   };
@@ -105,7 +109,6 @@ class Header extends Component {
         )
         .then(response => {
           console.log("Enviado.");
-          console.log(response.data.Body.token);
           const { token } = response.data.Body;
           this.setState({ ...this.loginObject, loginObject: JSON.stringify(response.data) });
 
