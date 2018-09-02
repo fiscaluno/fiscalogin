@@ -5,7 +5,7 @@ import { api } from "../services";
 import logo from "../images/logo.png";
 import "../style/style.css";
 
-class Header extends Component {
+export default class Header extends Component {
   componentDidMount() {
     window.fbAsyncInit = function() {
       window.FB.init({
@@ -139,5 +139,3 @@ class Header extends Component {
     );
   }
 }
-
-export default Header;

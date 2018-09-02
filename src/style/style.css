@@ -6,19 +6,17 @@ body {
 }
 
 /***************/
-
 /* HEADER AREA */
-
 /***************/
 
-ul {
+.App-header ul {
   list-style-type: none;
   margin: 0;
   overflow: hidden;
-  width: 80%;
+  width: 100%;
 }
 
-li {
+.App-header li {
   float: left;
 }
 
@@ -30,6 +28,7 @@ li {
 
 .App-header {
   background-color: #236eae;
+  top: 0;
   height: 30px;
   width: 100%;
   padding: 10px 20px 10px 80px;
@@ -44,17 +43,16 @@ li {
 }
 
 .App-login {
-  float: right;
+  float: right !important;
   text-align: center;
+  margin-right: 16em;
   margin-top: 0.4em;
   cursor: pointer;
 }
 
-/***************/
-
+/*************/
 /* BODY AREA */
-
-/***************/
+/*************/
 
 .contentDiv {
   background-image: url("https://thumb.lovemondays.com.br/OgQmaqU5marO2Eo9urpFI9xO0ME=/2560x1160/https://thumb.lovemondays.com.br/image/5752a20bf8ac4513b7ca41c79e8fccf5/home_galleries/0cdf83/globosat.png");
@@ -106,6 +104,153 @@ li {
   border-color: #ff6b70;
 }
 
+/********************/
+/* SEARCH PAGE AREA */
+/********************/
+
+#elementInstitutionSearch {
+  margin-top: 6em;
+}
+
+#containerSearch {
+  margin-left: 8.5em;
+  margin-right: 8.5em;
+  width: auto;
+  height: 100px;
+  background-color: #f1f1f1;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.75);
+  box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.75);
+}
+
+#institutionHeaderBackground {
+  display: block;
+  height: 40px;
+  width: 100%;
+  background-image: -webkit-gradient(linear,left top,right top,from(#c6e9f7),to(#e9f9ff));
+  background-image: -o-linear-gradient(left,#c6e9f7 0,#e9f9ff 100%);
+  background-image: linear-gradient(to right,#c6e9f7 0,#e9f9ff 100%);
+  background-repeat: repeat-x;
+}
+
+#institutionAvatar {
+  display: inline;
+}
+
+#institutionAvatar img{
+  width: 3em;
+  margin: -1em auto auto 3em;
+}
+
+#institutionName, #institutionName p {
+  display: inline;
+  margin: -1em 0 0 0.5rem;
+}
+
+#elementInstitutionReview {
+  margin-top: 2em;
+}
+
+#containerReview {
+  margin-left: 8.5em;
+  margin-right: 8.5em;
+  padding-bottom: 2em;
+  width: auto;
+  background-color: #f1f1f1;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.75);
+  box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.75);
+}
+
+#containerReview hr {
+  border-top: 1px solid #dcdcdc;
+}
+
+#institutionReviewTitle {
+  margin: 2em;
+  padding-top: 0.5em;
+}
+
+#institutionReviewTitle h2 {
+  color: #666;
+  margin-bottom: 0;
+}
+
+#institutionReviewTitle p {
+  color: #999;
+  font-size: 0.8em;
+  margin-top: 0;
+}
+
+#institutionReviewTitle hr {
+  height: 0;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: 0;
+  border-top: 1px solid #dcdcdc;
+}
+
+#institutionReviewContent {
+  margin: 2em;
+}
+
+#institutionReviewContent p {
+  color: #666;
+}
+
+#starRatingsDiv {
+  display: flex;
+}
+
+#starRatingsDiv p {
+  margin-left: 1em;
+}
+
+#nonOrderedRatingsList {
+  display: inline-block !important;
+}
+
+#starRatingsDivDetailed {
+  list-style-type: none;
+  padding: 0;
+  overflow: hidden;
+  width: 100%;
+}
+
+#starRatingsDivDetailed {
+  display: inherit;
+}
+
+#starRatingsDivDetailed li {
+  margin: 0.5em 0 0 0.5em;
+}
+
+#starRatingsDivDetailed li > div {
+  float: right;
+  margin: 0 0 0 1em;
+}
+
+#starRatingsDivDetailed p {
+  font-size: 12px;
+  vertical-align: middle;
+  right: 0;
+  display: inline-block;
+}
+
+#polarChart {
+  width: 60%;
+  display: inline-block !important;
+}
+
+#polarChart > canvas {
+  width: 100% !important;
+  height: 100% !important;
+  display: inherit;
+  float: right;
+}
+
 /**********************************
 ******** RESPONSIVE AREA **********
 **********************************/
@@ -114,6 +259,11 @@ li {
   .App-header {
     padding: 0.5rem;
   }
+
+  .App-login {
+    margin-right: 5rem;;
+  }
+
   .App-title {
     display: none;
   }
@@ -139,10 +289,55 @@ li {
     padding: 0 1.5rem 0 1.5rem;
     width: 90%;
   }
+
+  #elementInstitutionSearch {
+    width: 100%;
+  }
+
+  #containerSearch {
+    width: 100%;
+    margin: 0;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  #containerReview {
+    width: 100%;
+    margin: 0;
+    box-shadow: none;
+    border-radius: 0; 
+  }
 }
 
 @media (max-width: 1000px) {
   .App-header {
     padding: 0.5rem 0 0.5rem 0;
+  }
+}
+
+@media (min-width: 1600px) {
+
+  .App-header ul {
+    width: 75%;
+    margin-left: 10rem;
+    -webkit-padding-start: 0;
+  }
+
+  .App-login {
+    margin-right: 0;
+  }
+
+  #elementInstitutionSearch {
+    width: 88%;
+    margin-left: 8rem;
+  }
+
+  #elementInstitutionReview {
+    width: 88%;
+    margin-left: 8rem;
+  }
+
+  #polarChart {
+    margin-left: 5rem;
   }
 }

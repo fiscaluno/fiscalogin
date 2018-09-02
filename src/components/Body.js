@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 
 import Header from './Header';
-class Home extends Component {
+export default class Home extends Component {
   state = {
     formData: {},
     errorCheck: 0
@@ -37,5 +37,3 @@ class Home extends Component {
     );
   }
 }
-
-export default Home;

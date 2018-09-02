@@ -1,27 +1,31 @@
 import React, { Component } from 'react';
 
-import './searchStyle.css';
-
 import {
   searchCourse,
-/*  searchCourseWithID,
   searchInstitution,
+/*  searchCourseWithID,
   searchInstitutionWithID*/
 } from '../../../services';
 
 import Header from '../../Header';
+import InstitutionHeader from './components/InstitutionHeader';
+import MainSearchResult from './components/MainInstitutionReview';
 
 export default class Search extends Component {
   componentDidMount() {
-    const { curso, faculdade } = JSON.parse(localStorage.getItem('@FISCALUNO:SearchData'));
-    this.handleCallToRequest(curso, faculdade);
-  }
+    if (!localStorage.getItem('@FISCALUNO:SearchData')){
+      this.props.history.push('/');
+    } else {
+      const { curso, faculdade } = JSON.parse(localStorage.getItem('@FISCALUNO:SearchData'));
+      this.handleCalls(curso, faculdade);
+    }
+  };
 
   state = {
     searchData: []
-  }
+  };
 
-  handleCallToRequest = async (curso, faculdade) => {
+  handleCalls = async (curso, faculdade) => {
     try{
       searchCourse.get()
         .then(response => {
@@ -42,7 +46,15 @@ export default class Search extends Component {
 
   render() {
     return(
-      <Header />
+      <div>
+        <Header />
+        <div id="elementInstitutionSearch">
+          <InstitutionHeader /> 
+        </div>
+        <div id="elementInstitutionReview">
+          <MainSearchResult />
+        </div>
+      </div>
     );
   };
 };
