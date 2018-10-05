@@ -24,11 +24,12 @@ export default class Home extends Component {
     this.setState({
       ...this.state.btnState, btnState: props
     });
+    console.log(props);
     if (localStorage.getItem('@FISCALUNO:SearchType')){      
-      localStorage.removeItem('@FISCALUNO:SearchType');
-      localStorage.setItem('@FISCALUNO:SearchType', props);
+      localStorage.clear('@FISCALUNO:SearchType');
+      localStorage.setItem('@FISCALUNO:SearchType', this.state.btnState);
     } else {
-      localStorage.setItem('@FISCALUNO:SearchType', props);
+      localStorage.setItem('@FISCALUNO:SearchType', this.state.btnState);
     }
   };
 
@@ -43,24 +44,27 @@ export default class Home extends Component {
               <li className={ this.state.btnState === 'Institutions' 
                 ? 'clickedState' 
                 : 'notClicked' 
-              }>
-                <span onClick={this.handleClick.bind(this, 'Institutions')}>
+              }
+              onClick={this.handleClick.bind(this, 'Institutions')}>
+                <span>
                   Instituições
                 </span>
               </li>  
               <li className={ this.state.btnState === 'Courses' 
                 ? 'clickedState' 
                 : 'notClicked' 
-              }>
-                <span onClick={this.handleClick.bind(this, 'Courses')}>
+              }
+              onClick={this.handleClick.bind(this, 'Courses')}>
+                <span>
                   Cursos
                 </span>
               </li>
               <li className={ this.state.btnState === 'Exams' 
                   ? 'clickedState' 
                   : 'notClicked' 
-                }>
-                <span onClick={this.handleClick.bind(this, 'Exams')}>
+                }
+                onClick={this.handleClick.bind(this, 'Exams')}>
+                <span>
                   Vestibulares
                 </span>
               </li>           
