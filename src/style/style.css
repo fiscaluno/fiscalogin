@@ -71,9 +71,34 @@ body {
   bottom: 0;
   left: 0;
   width: 50%;
-  height: 140px;
+  height: 180px;
   background: rgba(35, 110, 174, 0.9);
   border-radius: 5px;
+}
+
+.contentDiv ul {
+  display: block;
+  text-align: center;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.contentDiv ul > li {
+  display: inline;
+  padding: .3rem 6%;
+  border: 1px solid;
+  cursor: pointer;
+}
+
+.contentDiv ul > li:hover {
+  color: #236eae;
+  background-color: white;
+}
+
+.clickedState {
+  color: #236eae;
+  background-color: white;
 }
 
 #engineForm {

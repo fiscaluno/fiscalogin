@@ -44,14 +44,19 @@ export default class Header extends Component {
   }
 
   facebookLogin = () => {
-    window.FB.login(
-      function(resp) {
-        this.statusChangeCallback(resp);
-      }.bind(this),
-      {
-        scope: "email"
-      }
-    );
+    if (this.state.title === 'ENTRAR') {
+      window.FB.login(
+        function(resp) {
+          this.statusChangeCallback(resp);
+        }.bind(this),
+        {
+          scope: "email"
+        }
+      );
+    } else {
+      this.setState({ title: 'ENTRAR' });
+      localStorage.removeItem('@FISCALUNO:BtnTitle');
+    }
   };
 
   checkLoginState() {
