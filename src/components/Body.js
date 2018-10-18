@@ -2,6 +2,12 @@ import React, { Component } from "react";
 
 import Header from './Header';
 export default class Home extends Component {
+
+  componentDidMount() {
+    localStorage.removeItem('@FISCALUNO:SearchData');
+    localStorage.removeItem('@FISCALUNO:SearchType');
+  }
+
   state = {
     formData: {},
     errorCheck: 0,
@@ -25,12 +31,7 @@ export default class Home extends Component {
       ...this.state.btnState, btnState: props
     });
     console.log(props);
-    if (localStorage.getItem('@FISCALUNO:SearchType')){      
-      localStorage.clear('@FISCALUNO:SearchType');
-      localStorage.setItem('@FISCALUNO:SearchType', this.state.btnState);
-    } else {
-      localStorage.setItem('@FISCALUNO:SearchType', this.state.btnState);
-    }
+    localStorage.setItem('@FISCALUNO:SearchType', JSON.stringify(props));
   };
 
   render() {
@@ -71,7 +72,19 @@ export default class Home extends Component {
             </ul>
             <form id="engineForm" onSubmit={this.searchRequest}>
               <input type="text" name="faculdade" placeholder="Faculdade..." onChange={this.handleChange}/>
-              <input type="text" name="curso" placeholder="Curso..." onChange={this.handleChange}/>
+              <input 
+                type="text" 
+                name={
+                  this.state.btnState === 'Institutions'
+                  ? 'Cidade...'
+                  : 'Curso...'
+                } 
+                placeholder={
+                  this.state.btnState === 'Institutions'
+                  ? 'Cidade...'
+                  : 'Curso...'
+                } 
+                onChange={this.handleChange}/>
               <button type="submit">Buscar</button>
             </form>
           </div>

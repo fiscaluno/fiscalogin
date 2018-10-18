@@ -14,26 +14,17 @@ import MainSearchResult from './components/MainInstitutionReview';
 export default class Search extends Component {
   state = {
     searchData: [],
-    searchType: ''
   };
 
   componentDidMount() {
-    if (!localStorage.getItem('@FISCALUNO:SearchData') 
-      && !localStorage.getItem('@FISCALUNO:SearchType')){
-      this.props.history.push('/');
-    } else {
-      const { curso, faculdade } = JSON.parse(localStorage.getItem('@FISCALUNO:SearchData'));
-      this.handleCalls(curso, faculdade);
-
-      this.setState({
-        ...this.state.searchType, searchType: localStorage.getItem('@FISCALUNO:SearchType')
-      });
-      console.log(this.state.searchType);
-    }
+    this.handleCalls(JSON.parse(localStorage.getItem('@FISCALUNO:SearchData')));
   };
 
-  handleCalls = async (curso, faculdade) => {
-    switch (this.state.searchType) {
+  handleCalls = async (formData) => {
+    let filter = localStorage.getItem('@FISCALUNO:SearchType');
+    console.log(formData)
+    console.log(filter);
+    switch (JSON.parse(filter)) {
       case 'Institutions':
         break;
       case 'Course':
@@ -49,9 +40,11 @@ export default class Search extends Component {
             })
         }catch (err) {
           console.log(err);
+          this.props.history.push('/');
         };
         break;
       case 'Exams':
+        console.log(JSON.parse(filter));
         break;
       default:
         this.props.history.push('/');
@@ -67,7 +60,6 @@ export default class Search extends Component {
     return(
       <div>
         <Header />
-        {}
         <div id="elementInstitutionSearch">
           <InstitutionHeader /> 
         </div>
