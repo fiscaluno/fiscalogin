@@ -60,15 +60,6 @@ export default class Home extends Component {
                   Cursos
                 </span>
               </li>
-              <li className={ this.state.btnState === 'Exams' 
-                  ? 'clickedState' 
-                  : 'notClicked' 
-                }
-                onClick={this.handleClick.bind(this, 'Exams')}>
-                <span>
-                  Vestibulares
-                </span>
-              </li>           
             </ul>
             <form id="engineForm" onSubmit={this.searchRequest}>
               <input type="text" name="faculdade" placeholder="Faculdade..." onChange={this.handleChange}/>

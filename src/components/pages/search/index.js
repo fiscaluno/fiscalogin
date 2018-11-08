@@ -1,72 +1,105 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
+
+import ReactLoading from 'react-loading';
 
 import {
   searchCourse,
-  searchInstitution,
-/*  searchCourseWithID,
-  searchInstitutionWithID*/
+  searchInstitution
 } from '../../../services';
 
 import Header from '../../Header';
-import InstitutionHeader from './components/InstitutionHeader';
-import MainSearchResult from './components/MainInstitutionReview';
+import ListSearchView from './components/ListSearchView'
 
 export default class Search extends Component {
+  componentWillMount() {
+    const filter = JSON.parse(localStorage.getItem('@FISCALUNO:SearchType'));
+
+    this.handleCalls(filter);
+  }
+
   state = {
     searchData: [],
+    loading: 1
   };
 
-  componentDidMount() {
-    this.handleCalls(JSON.parse(localStorage.getItem('@FISCALUNO:SearchData')));
-  };
+  handleCalls = async (searchType) => {
+    console.log(searchType);
+    switch (searchType) {
 
-  handleCalls = async (formData) => {
-    let filter = localStorage.getItem('@FISCALUNO:SearchType');
-    console.log(formData)
-    console.log(filter);
-    switch (JSON.parse(filter)) {
       case 'Institutions':
-        break;
-      case 'Course':
-        try{
-          searchCourse.get()
-            .then(response => {
-              console.log(response);
-              this.setState({ ...this.state.searchData, searchData: response.data });
-              console.log(this.state.searchData);
-              this.state.searchData.result.forEach(element => {
-                this.mountCoursesList(element);
-              });
-            })
-        }catch (err) {
+        console.log('entrei no institutions');
+        try {
+
+          console.log('to no try');
+          const response = await searchInstitution.get();
+
+          console.log(response);
+
+          this.setState({ 
+            searchData: [
+              ... this.state.searchData,
+              response.data.result
+            ],
+            loading: 0
+          });
+          
+          console.log(this.state.searchData);
+
+        } catch (err) {
+
           console.log(err);
           this.props.history.push('/');
+
         };
         break;
-      case 'Exams':
-        console.log(JSON.parse(filter));
+
+      case 'Courses':
+        console.log('entrei no courses');
+        try {
+
+          console.log('to no try');
+          const response = await searchCourse.get();
+
+          console.log(response);
+
+          this.setState({ 
+            searchData: [
+              ... this.state.searchData,
+              response.data.result
+            ],
+            loading: 0
+          });
+          
+          console.log(this.state.searchData);
+
+        } catch (err) {
+
+          console.log(err);
+          this.props.history.push('/');
+
+        };
         break;
+
+      case 'Exams':
+        console.log(JSON.parse(searchType));
+        break;
+
       default:
         this.props.history.push('/');
         break;
-    }
-  };
 
-  mountCoursesList = (component) => {
-    console.log(component);
+    }
   };
 
   render() {
     return(
-      <div>
+      <Fragment>
         <Header />
-        <div id="elementInstitutionSearch">
-          <InstitutionHeader /> 
-        </div>
-        <div id="elementInstitutionReview">
-          <MainSearchResult />
-        </div>
-      </div>
+        { this.state.loading === 1 
+          ? <ReactLoading type={'bubbles'} color={'#000000'} height={'20%'} width={'20%'} />
+          : <ListSearchView data={this.state.searchData} />
+        }
+      </Fragment>
     );
   };
 };
