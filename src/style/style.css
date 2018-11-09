@@ -182,8 +182,7 @@ body {
 }
 
 #containerReview {
-  margin-left: 8.5em;
-  margin-right: 8.5em;
+  margin: 6rem 8.5rem;
   padding-bottom: 2em;
   width: auto;
   background-color: #f1f1f1;
