@@ -34,8 +34,6 @@ let chartData = {
 
 let object = JSON.parse(localStorage.getItem('@FISCALUNO:ObjectToBeDetailed'));
 
-console.log(object.average_rating);
-
 const MainSearchResult = () => (
     <div>
         <Header />

@@ -29,3 +29,42 @@
     padding: 1rem 0;
     border-bottom: .05rem solid black;
 }
+
+@media (min-width: 300px) {
+    .resultContainer {
+        width: 85%;
+        padding: 0;
+        padding: 1rem;
+        margin: 15% auto;
+    }
+
+    .uniPic img {
+        width: 40%;
+        height: 20%;
+        border-radius: 1rem;
+    }
+}
+
+@media (min-width: 1440px) {
+    .resultContainer {
+        margin: 5% auto;
+        width: 80%;
+    }
+
+    .uniPic img {
+        width: 50%;
+        height: 100%;
+    }
+}
+
+@media (min-width: 1920px) {
+    .resultContainer {
+        margin: 5% auto;
+        width: 70%;
+    }
+
+    .uniPic img {
+        width: 50%;
+        height: 100%;
+    }
+}

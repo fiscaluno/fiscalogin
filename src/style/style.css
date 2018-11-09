@@ -288,21 +288,30 @@ body {
     padding: 0.5rem;
   }
 
+  .App-header ul {
+    padding: 0;
+  }
+
   .App-login {
-    margin-right: 5rem;;
+    margin-right: 3rem;;
   }
 
   .App-title {
     display: none;
   }
   #content div {
-    width: 65%;
+    width: 75%;
     padding: 0 0.5rem 0 0.5rem;
-    height: 250px;
+    height: 350px;
   }
   .contentDiv {
     height: 740px;
     background-image: url("https://www.tcdi.com/wp-content/uploads/2015/05/Future.jpg");
+  }
+  .contentDiv ul > li {
+    margin: auto;
+    width: 55%;
+    display: block;
   }
   #engineForm {
     display: block;
