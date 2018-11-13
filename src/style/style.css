@@ -87,8 +87,10 @@ body {
 .contentDiv ul > li {
   display: inline;
   padding: .3rem 16%;
+  margin: 0 .2rem;
   border: 1px solid;
   cursor: pointer;
+  border-radius: .2rem;
 }
 
 .contentDiv ul > li:hover {
@@ -120,17 +122,63 @@ body {
   border: 0;
   font-size: 18px;
   color: #444;
-  margin-left: 20px;
+  margin-left: 2px;
 }
 
 #engineForm button {
   height: 40px;
-  padding: 0 10px;
-  margin-left: 10px;
-  margin-right: 20px;
+  font-size: 1rem;
+  padding: 0 1.5rem;
+  margin-left: 20px;
   color: #fff;
   background-color: #ff6b70;
   border-color: #ff6b70;
+}
+
+.howItWorks {
+  height: 20rem;
+  padding: 2rem 10rem;
+  text-align: center;
+}
+
+.hIWTitle {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #236eae;
+}
+
+.hIWContent {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.students {
+  width: 33%;
+}
+
+.students i {
+  font-size: 3rem;
+  padding: 1.5rem;
+  color: #236eae;
+  border: .1rem solid #236eae;
+  border-radius: 50%;
+}
+
+.studentsDescription {
+  color: #787878;
+}
+
+.footer {
+  height: 4rem;
+  background-color: #236eae;
+  color: white;
+  text-align: center;
+  font-size: .9rem;
+}
+
+.footerText{
+  padding-top: 1.3rem;
 }
 
 /********************/
@@ -283,7 +331,7 @@ body {
 ******** RESPONSIVE AREA **********
 **********************************/
 
-@media (max-width: 600px) {
+@media (max-width: 700px) {
   .App-header {
     padding: 0.5rem;
   }
@@ -343,6 +391,29 @@ body {
     margin: 0;
     box-shadow: none;
     border-radius: 0; 
+  }
+
+  .howItWorks {
+    height: 40rem;
+    padding: 0 1rem;
+    margin: 0;
+  }
+
+  .hIWContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: space-between;
+  }
+
+  .students {
+    width: 90%;
+  }
+}
+
+@media (max-width: 800px) {
+  #content div {
+    width: 60%;
   }
 }
 

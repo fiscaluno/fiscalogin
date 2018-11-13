@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 
 import Header from './Header';
+import Footer from './Footer';
 export default class Home extends Component {
 
   componentDidMount() {
@@ -76,10 +77,47 @@ export default class Home extends Component {
                   : 'Curso...'
                 } 
                 onChange={this.handleChange}/>
-              <button type="submit">Buscar</button>
+              <button type="submit"><i class="fas fa-search"></i></button>
             </form>
           </div>
         </div>
+        <div className="howItWorks">
+          <div className="hIWTitle">
+            <p>
+              Como funciona
+            </p>
+          </div>
+          <div className="hIWContent">
+            <div className="students">
+              <p>
+                <i class="fas fa-university"></i>
+              </p>
+              <p className="studentsDescription">
+                Saiba o que os estudantes acham
+                da faculdade onde estudam.
+              </p>
+            </div>
+            <div className="students">
+              <p>
+                <i class="fas fa-hand-holding-usd"></i>
+              </p>
+              <p className="studentsDescription">
+                Descubra bolsas e programas que
+                reduzem o custo mensal dos cursos.
+              </p>
+            </div>
+            <div className="students">
+              <p>
+                <i class="fas fa-user-graduate"></i>
+              </p>
+              <p className="studentsDescription">
+                Matricule-se no curso da faculdade
+                ideal para você.
+              </p>
+            </div>
+          </div>
+        </div>
+        <Footer />
       </div>
     );
   }

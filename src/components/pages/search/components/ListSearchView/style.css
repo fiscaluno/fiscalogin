@@ -45,6 +45,19 @@
     }
 }
 
+
+@media (min-width: 1280px) {
+    .resultContainer {
+        margin: 6% auto;
+        width: 75%;
+    }
+
+    .uniPic img {
+        width: 50%;
+        height: 100%;
+    }
+}
+
 @media (min-width: 1440px) {
     .resultContainer {
         margin: 5% auto;
