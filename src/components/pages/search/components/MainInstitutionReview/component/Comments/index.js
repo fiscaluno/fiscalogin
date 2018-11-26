@@ -1,17 +1,14 @@
 import React from 'react';
 
-const Comments = (props) = (
-    <div id="commentsContainer">
-        <p>"{this.props.pros}"</p>
-        <div>
-            <p>
-                {this.props.career}
-            </p>
-            <p id>
-                {this.props.city}/{this.props.state}
-            </p>
-        </div>
+import './style.css';
+
+const Comments = (props) => (
+    <div className="commentContainer">
+        { props.data[0].map(object => (
+            <p>asd</p>
+        )) }
     </div>
 );
+
 
 export default Comments;

@@ -4,7 +4,7 @@ import ReactLoading from 'react-loading';
 
 import {
   searchCourse,
-  searchInstitution
+  searchInstitution,
 } from '../../../services';
 
 import Header from '../../Header';
@@ -55,30 +55,30 @@ export default class Search extends Component {
 
       case 'Courses':
         console.log('entrei no courses');
-        this.props.history.push('/');
-        // try {
+        // this.props.history.push('/');
+        try {
 
-        //   console.log('to no try');
-        //   const response = await searchCourse.get();
+          console.log('to no try');
+          const response = await searchCourse.get();
 
-        //   console.log(response);
+          console.log(response);
 
-        //   this.setState({ 
-        //     searchData: [
-        //       ... this.state.searchData,
-        //       response.data.result
-        //     ],
-        //     loading: 0
-        //   });
+          this.setState({ 
+            searchData: [
+              ... this.state.searchData,
+              response.data.result
+            ],
+            loading: 0
+          });
           
-        //   console.log(this.state.searchData);
+          console.log(this.state.searchData);
 
-        // } catch (err) {
+        } catch (err) {
 
-        //   console.log(err);
-        //   this.props.history.push('/');
+          console.log(err);
+          this.props.history.push('/');
 
-        // };
+        };
         break;
 
       case 'Exams':

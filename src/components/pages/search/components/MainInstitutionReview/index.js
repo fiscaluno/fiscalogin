@@ -6,33 +6,61 @@ import { Polar } from 'react-chartjs-2';
 
 import Header from '../../../../Header';
 
+let object = JSON.parse(localStorage.getItem('@FISCALUNO:ObjectToBeDetailed'));
+
 let starDimension = '30px';
 
-let chartData = {
-    datasets: [{
-        data: [
-            1.403,
-            4.403,
-            2.403,
-            5.403
-        ],
-        backgroundColor: [
-            '#FF6384',
-            '#4BC0C0',
-            '#FFCE56',
-            '#E7E9ED',
-        ],
-        label: 'Avaliações' // for legend
-    }],
-    labels: [
-        'Média de aprovação da universidade',
-        'Média de engajamento dos cursos',
-        'Média de avaliação da infraestrutura',
-        'Média de avaliação do atendimento'
-    ]
-};
+let chartData = {};
 
-let object = JSON.parse(localStorage.getItem('@FISCALUNO:ObjectToBeDetailed'));
+if (!object.course_average_rating){
+    chartData = {
+        datasets: [{
+            data: [
+                object.average_rating,
+                object.average_rating,
+                object.average_rating,
+                object.average_rating
+            ],
+            backgroundColor: [
+                '#FF6384',
+                '#4BC0C0',
+                '#FFCE56',
+                '#E7E9ED',
+            ],
+            label: 'Avaliações' // for legend
+        }],
+        labels: [
+            'Média de aprovação da universidade',
+            'Média de engajamento dos cursos',
+            'Média de avaliação da infraestrutura',
+            'Média de avaliação do atendimento'
+        ]
+    };   
+}else{
+    chartData = {
+        datasets: [{
+            data: [
+                object.course_average_rating,
+                object.course_average_rating,
+                object.course_average_rating,
+                object.course_average_rating
+            ],
+            backgroundColor: [
+                '#FF6384',
+                '#4BC0C0',
+                '#FFCE56',
+                '#E7E9ED',
+            ],
+            label: 'Avaliações' // for legend
+        }],
+        labels: [
+            'Média de aprovação da universidade',
+            'Média de engajamento dos cursos',
+            'Média de avaliação da infraestrutura',
+            'Média de avaliação do atendimento'
+        ]
+    }; 
+}
 
 const MainSearchResult = () => (
     <div>
@@ -40,9 +68,6 @@ const MainSearchResult = () => (
         <div id="containerReview">
             <div id="institutionReviewTitle">
                 <h2>Como é estudar na(o) {object.name}?</h2>
-                <p>
-                    10 postagens (5 avaliações nos últimos 12 meses)
-                </p>
                 <hr />
             </div>
             <div id="institutionReviewContent">
